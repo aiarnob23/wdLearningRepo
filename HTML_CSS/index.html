@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Html</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <p>hr tag</p>
+    <hr>
+
+    <!------------ Table -------------->
+    <h4>Table</h4>
+    <table>
+        <caption>This is a table caption</caption>
+        <thead>
+            <tr>
+                <th>
+                    name
+                </th>
+                <th>
+                    age
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Arnob</td>
+                <td>21</td>
+            </tr>
+            <tr>
+                <td>Arnob jr.</td>
+                <td>00</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- -----fieldSet -->
+    <h3>FieldSet</h3>
+    <fieldset>
+        <legend>This is legend heading</legend>
+        <label for="x" id="x"><input placeholder="Enter the name" type="text"></label>
+    </fieldset>
+    
+    <!-- -----------Positions----------- -->
+    <h3>-----------Positions-----------</h3>
+    <!-- parent position: relative -->
+    <div class="parentBox">
+        <div id="child1">
+            absolute ->Free moves
+            <!-- losts actual position. move from its absolute parent which is relative div -->
+        </div>
+        <div id="child2">
+            fixed
+            <!-- Use for scrolling. moves by considering the window as parent -->
+        </div>
+        <div id="child3">
+           static -> Unchangable
+           <!-- Unchangable position -->
+        </div>
+    </div>
+
+     <!-- button hover -->
+     <button class="hoverTest">Hover</button>
+
+
+</body>
+
+</html>
