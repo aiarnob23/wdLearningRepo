@@ -3,12 +3,18 @@
 ***find({age:{$eq : 25}},{age:1})***
 
 ## (,) inside {} after the field name : specifies implicit and(&&) operation  
-***find({age:{$gte : 25 , $lt:27}} , {age:1, gender:1}).sort({age:1})***<br>
+***find({age:{$gte : 25 , $lt:27}} , {age:1, gender:1}).sort({age:1})***
+
+
 ***find({age : {$gte : 25, $lte:26}} , {gender:"male"} )***
 
 ## $in : selects the documents where the value of a field equals any value in the specified array. Its kinda like or(||) operation.
 ***find({ age: { $in: [24, 25, 32] } } )***
+
+
 **tags is an arry :**
+
+
 ***find({ tags: { $in: [ fruit" , "sweet" ] } } )***
 
 ## $nin : selects the documents where:
