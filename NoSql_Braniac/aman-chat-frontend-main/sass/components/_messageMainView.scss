@@ -1,0 +1,280 @@
+.messageMainView {
+    min-height: 500px;
+    height: calc(100vh - 68px);
+
+    .messageHeader {
+        padding: 7px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .mobileLeftArrow{
+          display: none;
+        }
+        .photoAndName{
+            .selectName {
+                font-size: 18px;
+                text-transform: capitalize;
+            }
+        }
+    }
+    .messageBody-main{
+        height: calc(100vh - 144px);
+    }
+
+ // message body --------------
+.messageBody-main{
+  position: relative; 
+    .messageListShow{
+        padding: 0 20px;
+        flex-direction: column-reverse;
+        // height: calc(100% - 65px);
+        display: flex;
+     .messageContentShowMain{
+
+        .messageBox{
+            display: flex;
+            flex-direction: column;
+            text-align: start;
+            padding: 6px 11px 6px 11px;
+            position: relative;
+            border-radius: 20px;
+            
+            .msgOptionsIcon{
+                opacity: 0;
+            }
+            &:hover{
+                .msgOptionsIcon{
+                    opacity: 1;
+                }
+            }
+            .messageContentMain{
+                display: flex;
+                .messageTime{
+                    min-width: 73px;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: flex-end;
+                    margin: 1px 0px -4px 0px;
+                    font-size: 11px;
+                    .sendStatusIcon{
+                        margin: 2px;
+                    }
+                }
+            }
+          
+
+        }
+     }
+    }
+
+    .messageInput{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        margin-bottom: 9px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .fileattach{
+          position: relative;
+        }
+        .inputTextMain{
+        position: relative;
+        width: 93%;
+            input{
+                width: 100%;
+                border: 0;
+                padding: 11px 13px;
+                outline: none;
+            }
+            .emojiIcon{
+                position: absolute;
+                right: 0;
+                bottom: -3px;
+            }
+            .emojiShow{
+                position: absolute;
+                bottom: calc(100% + 8px);
+                right: 0px;
+                z-index: 1;
+            }
+        }
+
+    }
+    .senderAvatar {
+        @include getImgDimensions(0.31); 
+        background-color: transparent;
+        margin: 7px 10px 0px 2px;
+        cursor: pointer;
+      }
+
+}
+
+.preFileDirect{
+    position: absolute;
+    bottom: 37px;
+    left: 0px;
+    border-top-left-radius: 17px;
+    border-top-right-radius: 17px;
+    height: 195px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.msgDate{
+    margin: 0 auto;
+    padding: 10px 10px;
+}
+
+
+}
+
+//profileShowDialog
+.profileShowDialog{
+    padding: 10px 24px;
+    .profileDialogContent {
+        margin-top: 11px;
+        padding-bottom: 19px;
+        text-align: center;
+        h2,h3 {
+        margin: 0;
+        }
+    }
+}
+
+#preview {
+    display: none !important;
+}
+
+
+// fullScreenImage
+.fullScreenImage{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .customizeImage{
+        position: relative;
+        width: 80vh;
+        height: 82vh;
+        object-fit: contain;
+    }
+ 
+}
+
+// message attachment
+
+.msgImageWrapper{
+.imageEditIcons{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+}
+
+.typingIndicator {
+    position: relative;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    & > span {
+      color: #a9c7f5;
+      font-size: 15px;
+    }
+  }
+
+  .displayTyping {
+    animation: slideUp 0.4s 1;
+    bottom: 0px;
+  }
+  .hideTyping {
+    animation: slideDown 0.4s 1;
+    bottom: 10px;
+  }
+
+
+  .pdfFile {
+    background-color: #f83333dc;
+    text-align: center;
+    @include setFileSizeColor(#f3d0f7);
+  }
+  .excelFile {
+    @include setFileSizeColor(#c2f1ef);
+  }
+  .pptFile {
+    background-color: #d1560e;
+    @include setFileSizeColor(#f7e7e7);
+  }
+  .wordFile {
+    background-color: #0102027e;
+    @include setFileSizeColor(#c2f1ef);
+  }
+  .mediaFile {
+    background-color: #4b0539be;
+    padding-bottom: 6px;
+    @include setFileSizeColor(#f3d0f7);
+    .mediaMsg {
+      display: flex;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+      min-width: 180px;
+      background-color: #666666aa;
+      transition: transform 0.2s ease;
+      padding: 10px 0;
+      color: #fff;
+      &:hover {
+        background-color: #777777aa;
+      }
+      &:active {
+        background-color: #888888aa;
+        transform: scale(0.98);
+      }
+      .playMedia {
+        transition: transform 0.2s ease;
+        &:active {
+          color: #d2e9e7;
+          transform: scale(0.8);
+        }
+      }
+      .mediaDuration {
+        position: absolute;
+        font-weight: 600;
+        font-size: 15px;
+      }
+      .videoDuration {
+    @include setPositions($bottom: 0px, $left: 5px);
+      }
+      .audioDuration {
+        @include setPositions($bottom: 2px, $left: 3px);
+      }
+    }
+  }
+
+
+  @media screen and (max-width:'768px') {
+    .messageMainView {
+      min-height: 500px;
+      height: calc(100vh - 68px);
+      .messageHeader {
+        padding: 3px 2px;
+        .mobileLeftArrow{
+          display: block;
+          margin-top: 10px;
+        }
+      }
+
+      .messageBody-main {
+        height: calc(100vh - 67px);
+      }
+
+
+    }
+  }

@@ -1,0 +1,161 @@
+.chatListArea-main {
+    min-height: 500px;
+    height: calc(100vh - 68px);
+    overflow: hidden;
+    border-right: 0.1rem solid;
+
+    .activeUsers{
+        display: flex;
+        .createOthers {
+            width: 19%;
+            p {
+                margin: 0;
+                font-size: 13px;
+                line-height: 15px;
+                margin-top: 6px;
+                margin-left: 5px;
+            }
+        }
+        .userActiveLists {
+            width: 90%;
+            .onLineUserMain {
+                display: flex;
+                width: 100%;
+                overflow-x: scroll;
+                margin-left: 12px;
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+            }
+        }
+        h3{
+            margin: 0;
+        }
+        .activeUserItem{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin-right: 16px;
+            .userActiveName {
+                text-align: center;
+                margin-top: 6px;
+                line-height: 14px;
+                p {
+                    margin: 0;
+                    font-size: 13px;
+                }
+            }
+            .userAvatar{
+                position: relative;
+                .activeStatus {
+                    background-color: #46ab5e;
+                    width: 14px;
+                    height: 14px;
+                    position: absolute;
+                    bottom: 3px;
+                    right: 2px;
+                    border-radius: 23px;
+                    border: 1px solid;
+                }
+            }
+        }
+    }
+    .chatListHeader {
+        padding: 10px 15px 0px;
+
+        .headerTitle{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px 4px;
+            margin-bottom: 13px;
+            .titleMain{
+                h2 {
+                    margin: 0;
+                }
+            }
+            .groupChatCreate {
+                border-radius: 29px;
+            }
+        }
+
+        .headerSearch {
+            margin-top: 5px;
+            margin-bottom: 17px;
+            input {
+                width: 100%;
+                padding: 10px 16px;
+                border-radius: 2px;
+                border: none;
+                outline: none;
+                font-size: 16px;
+            }
+        }
+        .mobileChatTitle {
+            display: flex;
+        }
+    }
+
+    .chatListAreaMain {
+        height: 86%;
+        padding: 12px 6px;
+    }
+
+    .chatListUserInfo{
+        display: flex;
+        // align-items: center;
+        padding: 6px 12px;
+        border-radius: 9px;
+        .activeStatus{
+            background-color: #46ab5e;
+            width: 14px;
+            height: 14px;
+            position: absolute;
+            bottom: 3px;
+            right: 2px;
+            border-radius: 23px;
+            border: 1px solid;
+        }
+        p{
+            margin: 0;
+        }
+        .chatUserContent{
+            width: 100%;
+            margin-left: 15px;
+            .chatNameAndLastMessasgeDate{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .chatListName {
+                    font-size: 16px;
+                    text-transform: capitalize;
+                }
+            }
+            
+            .notificationCountAnd-lastMessageShow{
+              position: relative;
+
+              .chatListNotificationCount{
+                  position:absolute;
+                  top: 14px;
+                  right: 9px;
+              }
+              .chatListLastMessage {
+                display: flex;
+               }
+            }
+        }
+}
+}
+
+@media screen and (max-width:'768px') {
+    .chatListArea-main {
+        border-right: 0;
+        overflow: inherit;
+    }
+    .chatListArea-main .chatListAreaMain {
+        height: 69%;
+        padding: 6px 6px 0;
+    }
+
+}

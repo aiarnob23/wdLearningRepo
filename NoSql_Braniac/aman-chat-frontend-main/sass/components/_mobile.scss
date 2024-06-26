@@ -1,0 +1,121 @@
+.modeStatus p {
+    margin: 0;
+    line-height: 19px;
+}
+
+.modeStatus p:last-child {
+    font-size: 13px;
+    color: #8b8888;
+}
+.changePassword {
+    display: flex;
+    padding: 13px 0px;
+    .changePassIcon {
+        margin-right: 13px;
+        background: aqua;
+        border-radius: 42px;
+        width: 37px;
+        height: 37px;
+        padding: 4px 8px;
+        transform: translate(3px, 0px);
+    }
+    .changPassTxt {
+        p {
+            margin: 0;
+            line-height: 15px;
+            &:last-child{
+                font-weight: bold;
+                letter-spacing: 4px;
+                font-size: 19px;
+            }
+        }
+    }
+}
+.logout-area {
+    display: flex;
+    align-items: center;
+    .logoutIcon {
+        margin-right: 16px;
+        background: red;
+        border-radius: 42px;
+        width: 37px;
+        height: 37px;
+        padding: 6px 8px;
+        transform: translate(3px, 0px);
+    }
+    
+}
+.notification-area.mobile {
+    margin: 0;
+}
+
+
+
+// people area
+.headerSearch {
+    margin-top: 5px;
+    margin-bottom: 17px;
+    input {
+        width: 100%;
+        padding: 10px 16px;
+        border-radius: 2px;
+        border: none;
+        outline: none;
+        font-size: 16px;
+    }
+}
+.user-Info {
+    margin-left: 16px;
+    line-height: 18px;
+    p{
+        margin: 0;
+    }
+}
+
+
+
+// incoming call
+.callerPhoto {
+    margin-top: 16px;
+}
+
+.callerInfo {
+    text-align: center;
+    line-height: 26px;
+    p {
+        margin: 0;  
+        margin-top: 5px;
+        font-size: 16px;
+    }
+    .callerName {
+        margin-top: 13px;
+        h2 {
+            margin: 0;
+        }
+    }
+   
+}
+
+.callAction {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    margin-top: 14px;
+    margin-bottom: 11px;
+    .callButton {
+        text-align: center;
+        width: 100px;
+        .callBtnIcon {
+            border-radius: 32px;
+            width: 45px;
+            height: 45px;
+            padding: 3px 3px;
+            margin: auto;
+            margin-bottom: 6px;
+        }
+        p {
+            margin: 0;
+        }
+        
+    }
+}

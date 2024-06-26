@@ -1,0 +1,54 @@
+.profile-area{
+    align-items: center;
+    
+    .profile-Image{
+        position: relative;
+
+        .profile-img-icon {
+            position: absolute;
+            // bottom: 0;
+            // right: 0;
+            text-align: center;
+            background-color: #d8dfda;
+            padding: 6px 6px 0px 6px;
+            border-radius: 36px;
+            label{
+             &:hover{
+                cursor: pointer;
+             }
+            }
+        }
+    }
+    .profile-content {
+        margin-left: 15px;
+        display: flex;
+        justify-content: space-between;
+        h2,h4{
+            margin: 0;
+        }
+    
+    }
+
+   .editNameFrom{
+    margin-left: 19px;
+    form {
+        display: flex;
+        flex-direction: column;
+    }}
+    .updateGPName{
+        margin: 10px 0;
+        h2 {
+            margin: 0;
+        }
+    }
+
+}
+.notificationUserList {
+    width: 307px;
+    padding: 10px;
+}
+.notificationListItem p {
+    margin: 0;
+    line-height: 19px;
+    margin-left: 9px;
+}
